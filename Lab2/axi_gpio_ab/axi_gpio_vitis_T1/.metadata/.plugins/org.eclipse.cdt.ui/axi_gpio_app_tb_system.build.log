@@ -1,0 +1,14 @@
+22:21:41 **** Incremental Build of configuration Debug for project axi_gpio_app_tb_system ****
+make all 
+Generating bif file for the system project
+generate_system_bif.bat 56597 C:/ECE520/Vivado/Lab2/axi_gpio_ab/axi_gpio_vitis_T1/axi_gpio_platform_T1/export/axi_gpio_platform_T1/axi_gpio_platform_T1.xpfm standalone_domain C:/ECE520/Vivado/Lab2/axi_gpio_ab/axi_gpio_vitis_T1/axi_gpio_app_tb_system/Debug/system.bif
+ECHO is off.
+ECHO is off.
+sdcard_gen --xpfm C:/ECE520/Vivado/Lab2/axi_gpio_ab/axi_gpio_vitis_T1/axi_gpio_platform_T1/export/axi_gpio_platform_T1/axi_gpio_platform_T1.xpfm --sys_config axi_gpio_platform_T1 --bif C:/ECE520/Vivado/Lab2/axi_gpio_ab/axi_gpio_vitis_T1/axi_gpio_app_tb_system/Debug/system.bif --bitstream C:/ECE520/Vivado/Lab2/axi_gpio_ab/axi_gpio_vitis_T1/axi_gpio_app_tb/_ide/bitstream/axi_gpio_ab_wrapper_T1.bit --elf C:/ECE520/Vivado/Lab2/axi_gpio_ab/axi_gpio_vitis_T1/axi_gpio_app_tb/Debug/axi_gpio_app_tb.elf,ps7_cortexa9_0
+ECHO is off.
+ECHO is off.
+creating BOOT.BIN using C:/ECE520/Vivado/Lab2/axi_gpio_ab/axi_gpio_vitis_T1/axi_gpio_app_tb/_ide/bitstream/axi_gpio_ab_wrapper_T1.bit
+Running C:/Xilinx/Vitis/2023.1/bin/bootgen  -image C:/ECE520/Vivado/Lab2/axi_gpio_ab/axi_gpio_vitis_T1/axi_gpio_app_tb_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN
+
+22:21:46 Build Finished (took 4s.962ms)
+

@@ -1,0 +1,731 @@
+20:33:03 DEBUG : Logs will be stored at 'C:/ECE520/Vivado/Lab2/axi_gpio_ab/axi_gpio_vitis_T1/IDE.log'.
+20:33:11 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\ECE520\Vivado\Lab2\axi_gpio_ab\axi_gpio_vitis_T1\temp_xsdb_launch_script.tcl
+20:33:11 INFO  : Registering command handlers for Vitis TCF services
+20:33:11 INFO  : Platform repository initialization has completed.
+20:33:13 INFO  : XSCT server has started successfully.
+20:33:13 INFO  : plnx-install-location is set to ''
+20:33:13 INFO  : Successfully done setting XSCT server connection channel  
+20:33:13 INFO  : Successfully done query RDI_DATADIR 
+20:33:13 INFO  : Successfully done setting workspace for the tool. 
+20:34:06 INFO  : Result from executing command 'getProjects': axi_gpio_platform_T1
+20:34:06 INFO  : Result from executing command 'getPlatforms': xilinx_zcu102_base_202310_1|C:/Xilinx/Vitis/2023.1/base_platforms/xilinx_zcu102_base_202310_1/xilinx_zcu102_base_202310_1.xpfm;xilinx_zcu102_base_dfx_202310_1|C:/Xilinx/Vitis/2023.1/base_platforms/xilinx_zcu102_base_dfx_202310_1/xilinx_zcu102_base_dfx_202310_1.xpfm;xilinx_zcu104_base_202310_1|C:/Xilinx/Vitis/2023.1/base_platforms/xilinx_zcu104_base_202310_1/xilinx_zcu104_base_202310_1.xpfm
+20:34:41 INFO  : Result from executing command 'getProjects': axi_gpio_platform_T1
+20:34:41 INFO  : Result from executing command 'getPlatforms': axi_gpio_platform_T1|C:/ECE520/Vivado/Lab2/axi_gpio_ab/axi_gpio_vitis_T1/axi_gpio_platform_T1/export/axi_gpio_platform_T1/axi_gpio_platform_T1.xpfm;xilinx_zcu102_base_202310_1|C:/Xilinx/Vitis/2023.1/base_platforms/xilinx_zcu102_base_202310_1/xilinx_zcu102_base_202310_1.xpfm;xilinx_zcu102_base_dfx_202310_1|C:/Xilinx/Vitis/2023.1/base_platforms/xilinx_zcu102_base_dfx_202310_1/xilinx_zcu102_base_dfx_202310_1.xpfm;xilinx_zcu104_base_202310_1|C:/Xilinx/Vitis/2023.1/base_platforms/xilinx_zcu104_base_202310_1/xilinx_zcu104_base_202310_1.xpfm
+21:07:21 INFO  : Checking for BSP changes to sync application flags for project 'axi_gpio_app_tb'...
+21:07:26 INFO  : Checking for BSP changes to sync application flags for project 'axi_gpio_app_tb'...
+21:07:52 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:07:52 INFO  : Jtag cable 'Digilent Zybo Z7 210351B3FE7AA' is selected.
+21:07:52 INFO  : 'jtag frequency' command is executed.
+21:07:52 INFO  : Context for 'APU' is selected.
+21:07:52 INFO  : System reset is completed.
+21:07:55 INFO  : 'after 3000' command is executed.
+21:07:55 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B3FE7AA" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B3FE7AA-13722093-0"}' command is executed.
+21:07:56 INFO  : Device configured successfully with "C:/ECE520/Vivado/Lab2/axi_gpio_ab/axi_gpio_vitis_T1/axi_gpio_app_tb/_ide/bitstream/axi_gpio_ab_wrapper_T1.bit"
+21:07:57 INFO  : Context for 'APU' is selected.
+21:07:57 INFO  : Hardware design and registers information is loaded from 'C:/ECE520/Vivado/Lab2/axi_gpio_ab/axi_gpio_vitis_T1/axi_gpio_platform_T1/export/axi_gpio_platform_T1/hw/axi_gpio_ab_wrapper_T1.xsa'.
+21:07:57 INFO  : 'configparams force-mem-access 1' command is executed.
+21:07:57 INFO  : Context for 'APU' is selected.
+21:07:57 INFO  : Sourcing of 'C:/ECE520/Vivado/Lab2/axi_gpio_ab/axi_gpio_vitis_T1/axi_gpio_app_tb/_ide/psinit/ps7_init.tcl' is done.
+21:07:57 INFO  : 'ps7_init' command is executed.
+21:07:57 INFO  : 'ps7_post_config' command is executed.
+21:07:57 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:07:57 INFO  : The application 'C:/ECE520/Vivado/Lab2/axi_gpio_ab/axi_gpio_vitis_T1/axi_gpio_app_tb/Debug/axi_gpio_app_tb.elf' is downloaded to processor 'ps7_cortexa9_0'.
+21:07:57 INFO  : 'configparams force-mem-access 0' command is executed.
+21:07:57 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B3FE7AA" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B3FE7AA-13722093-0"}
+fpga -file C:/ECE520/Vivado/Lab2/axi_gpio_ab/axi_gpio_vitis_T1/axi_gpio_app_tb/_ide/bitstream/axi_gpio_ab_wrapper_T1.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/ECE520/Vivado/Lab2/axi_gpio_ab/axi_gpio_vitis_T1/axi_gpio_platform_T1/export/axi_gpio_platform_T1/hw/axi_gpio_ab_wrapper_T1.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/ECE520/Vivado/Lab2/axi_gpio_ab/axi_gpio_vitis_T1/axi_gpio_app_tb/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/ECE520/Vivado/Lab2/axi_gpio_ab/axi_gpio_vitis_T1/axi_gpio_app_tb/Debug/axi_gpio_app_tb.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+21:07:57 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:07:57 INFO  : 'con' command is executed.
+21:07:57 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+21:07:57 INFO  : Launch script is exported to file 'C:\ECE520\Vivado\Lab2\axi_gpio_ab\axi_gpio_vitis_T1\axi_gpio_app_tb_system\_ide\scripts\debugger_axi_gpio_app_tb-default.tcl'
+21:10:11 INFO  : Checking for BSP changes to sync application flags for project 'axi_gpio_app_tb'...
+21:10:27 INFO  : Disconnected from the channel tcfchan#3.
+21:10:28 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:10:28 INFO  : Jtag cable 'Digilent Zybo Z7 210351B3FE7AA' is selected.
+21:10:28 INFO  : 'jtag frequency' command is executed.
+21:10:28 INFO  : Context for 'APU' is selected.
+21:10:28 INFO  : System reset is completed.
+21:10:31 INFO  : 'after 3000' command is executed.
+21:10:32 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B3FE7AA" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B3FE7AA-13722093-0"}' command is executed.
+21:10:33 INFO  : Device configured successfully with "C:/ECE520/Vivado/Lab2/axi_gpio_ab/axi_gpio_vitis_T1/axi_gpio_app_tb/_ide/bitstream/axi_gpio_ab_wrapper_T1.bit"
+21:10:33 INFO  : Context for 'APU' is selected.
+21:10:33 INFO  : Hardware design and registers information is loaded from 'C:/ECE520/Vivado/Lab2/axi_gpio_ab/axi_gpio_vitis_T1/axi_gpio_platform_T1/export/axi_gpio_platform_T1/hw/axi_gpio_ab_wrapper_T1.xsa'.
+21:10:33 INFO  : 'configparams force-mem-access 1' command is executed.
+21:10:33 INFO  : Context for 'APU' is selected.
+21:10:33 INFO  : Sourcing of 'C:/ECE520/Vivado/Lab2/axi_gpio_ab/axi_gpio_vitis_T1/axi_gpio_app_tb/_ide/psinit/ps7_init.tcl' is done.
+21:10:33 INFO  : 'ps7_init' command is executed.
+21:10:33 INFO  : 'ps7_post_config' command is executed.
+21:10:33 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:10:33 INFO  : The application 'C:/ECE520/Vivado/Lab2/axi_gpio_ab/axi_gpio_vitis_T1/axi_gpio_app_tb/Debug/axi_gpio_app_tb.elf' is downloaded to processor 'ps7_cortexa9_0'.
+21:10:33 INFO  : 'configparams force-mem-access 0' command is executed.
+21:10:33 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B3FE7AA" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B3FE7AA-13722093-0"}
+fpga -file C:/ECE520/Vivado/Lab2/axi_gpio_ab/axi_gpio_vitis_T1/axi_gpio_app_tb/_ide/bitstream/axi_gpio_ab_wrapper_T1.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/ECE520/Vivado/Lab2/axi_gpio_ab/axi_gpio_vitis_T1/axi_gpio_platform_T1/export/axi_gpio_platform_T1/hw/axi_gpio_ab_wrapper_T1.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/ECE520/Vivado/Lab2/axi_gpio_ab/axi_gpio_vitis_T1/axi_gpio_app_tb/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/ECE520/Vivado/Lab2/axi_gpio_ab/axi_gpio_vitis_T1/axi_gpio_app_tb/Debug/axi_gpio_app_tb.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+21:10:34 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:10:34 INFO  : 'con' command is executed.
+21:10:34 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+21:10:34 INFO  : Launch script is exported to file 'C:\ECE520\Vivado\Lab2\axi_gpio_ab\axi_gpio_vitis_T1\axi_gpio_app_tb_system\_ide\scripts\debugger_axi_gpio_app_tb-default.tcl'
+21:17:07 INFO  : Checking for BSP changes to sync application flags for project 'axi_gpio_app_tb'...
+21:17:18 INFO  : Disconnected from the channel tcfchan#5.
+21:17:19 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:17:20 INFO  : Jtag cable 'Digilent Zybo Z7 210351B3FE7AA' is selected.
+21:17:20 INFO  : 'jtag frequency' command is executed.
+21:17:20 INFO  : Context for 'APU' is selected.
+21:17:20 INFO  : System reset is completed.
+21:17:23 INFO  : 'after 3000' command is executed.
+21:17:23 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B3FE7AA" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B3FE7AA-13722093-0"}' command is executed.
+21:17:24 INFO  : Device configured successfully with "C:/ECE520/Vivado/Lab2/axi_gpio_ab/axi_gpio_vitis_T1/axi_gpio_app_tb/_ide/bitstream/axi_gpio_ab_wrapper_T1.bit"
+21:17:24 INFO  : Context for 'APU' is selected.
+21:17:24 INFO  : Hardware design and registers information is loaded from 'C:/ECE520/Vivado/Lab2/axi_gpio_ab/axi_gpio_vitis_T1/axi_gpio_platform_T1/export/axi_gpio_platform_T1/hw/axi_gpio_ab_wrapper_T1.xsa'.
+21:17:24 INFO  : 'configparams force-mem-access 1' command is executed.
+21:17:24 INFO  : Context for 'APU' is selected.
+21:17:24 INFO  : Sourcing of 'C:/ECE520/Vivado/Lab2/axi_gpio_ab/axi_gpio_vitis_T1/axi_gpio_app_tb/_ide/psinit/ps7_init.tcl' is done.
+21:17:24 INFO  : 'ps7_init' command is executed.
+21:17:24 INFO  : 'ps7_post_config' command is executed.
+21:17:24 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:17:24 INFO  : The application 'C:/ECE520/Vivado/Lab2/axi_gpio_ab/axi_gpio_vitis_T1/axi_gpio_app_tb/Debug/axi_gpio_app_tb.elf' is downloaded to processor 'ps7_cortexa9_0'.
+21:17:24 INFO  : 'configparams force-mem-access 0' command is executed.
+21:17:24 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B3FE7AA" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B3FE7AA-13722093-0"}
+fpga -file C:/ECE520/Vivado/Lab2/axi_gpio_ab/axi_gpio_vitis_T1/axi_gpio_app_tb/_ide/bitstream/axi_gpio_ab_wrapper_T1.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/ECE520/Vivado/Lab2/axi_gpio_ab/axi_gpio_vitis_T1/axi_gpio_platform_T1/export/axi_gpio_platform_T1/hw/axi_gpio_ab_wrapper_T1.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/ECE520/Vivado/Lab2/axi_gpio_ab/axi_gpio_vitis_T1/axi_gpio_app_tb/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/ECE520/Vivado/Lab2/axi_gpio_ab/axi_gpio_vitis_T1/axi_gpio_app_tb/Debug/axi_gpio_app_tb.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+21:17:25 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:17:25 INFO  : 'con' command is executed.
+21:17:25 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+21:17:25 INFO  : Launch script is exported to file 'C:\ECE520\Vivado\Lab2\axi_gpio_ab\axi_gpio_vitis_T1\axi_gpio_app_tb_system\_ide\scripts\debugger_axi_gpio_app_tb-default.tcl'
+21:18:05 INFO  : Checking for BSP changes to sync application flags for project 'axi_gpio_app_tb'...
+21:18:19 INFO  : Disconnected from the channel tcfchan#7.
+21:18:20 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:18:21 INFO  : Jtag cable 'Digilent Zybo Z7 210351B3FE7AA' is selected.
+21:18:21 INFO  : 'jtag frequency' command is executed.
+21:18:21 INFO  : Context for 'APU' is selected.
+21:18:21 INFO  : System reset is completed.
+21:18:24 INFO  : 'after 3000' command is executed.
+21:18:24 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B3FE7AA" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B3FE7AA-13722093-0"}' command is executed.
+21:18:25 INFO  : Device configured successfully with "C:/ECE520/Vivado/Lab2/axi_gpio_ab/axi_gpio_vitis_T1/axi_gpio_app_tb/_ide/bitstream/axi_gpio_ab_wrapper_T1.bit"
+21:18:25 INFO  : Context for 'APU' is selected.
+21:18:25 INFO  : Hardware design and registers information is loaded from 'C:/ECE520/Vivado/Lab2/axi_gpio_ab/axi_gpio_vitis_T1/axi_gpio_platform_T1/export/axi_gpio_platform_T1/hw/axi_gpio_ab_wrapper_T1.xsa'.
+21:18:25 INFO  : 'configparams force-mem-access 1' command is executed.
+21:18:25 INFO  : Context for 'APU' is selected.
+21:18:25 INFO  : Sourcing of 'C:/ECE520/Vivado/Lab2/axi_gpio_ab/axi_gpio_vitis_T1/axi_gpio_app_tb/_ide/psinit/ps7_init.tcl' is done.
+21:18:25 INFO  : 'ps7_init' command is executed.
+21:18:25 INFO  : 'ps7_post_config' command is executed.
+21:18:25 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:18:25 INFO  : The application 'C:/ECE520/Vivado/Lab2/axi_gpio_ab/axi_gpio_vitis_T1/axi_gpio_app_tb/Debug/axi_gpio_app_tb.elf' is downloaded to processor 'ps7_cortexa9_0'.
+21:18:26 INFO  : 'configparams force-mem-access 0' command is executed.
+21:18:26 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B3FE7AA" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B3FE7AA-13722093-0"}
+fpga -file C:/ECE520/Vivado/Lab2/axi_gpio_ab/axi_gpio_vitis_T1/axi_gpio_app_tb/_ide/bitstream/axi_gpio_ab_wrapper_T1.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/ECE520/Vivado/Lab2/axi_gpio_ab/axi_gpio_vitis_T1/axi_gpio_platform_T1/export/axi_gpio_platform_T1/hw/axi_gpio_ab_wrapper_T1.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/ECE520/Vivado/Lab2/axi_gpio_ab/axi_gpio_vitis_T1/axi_gpio_app_tb/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/ECE520/Vivado/Lab2/axi_gpio_ab/axi_gpio_vitis_T1/axi_gpio_app_tb/Debug/axi_gpio_app_tb.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+21:18:26 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:18:26 INFO  : 'con' command is executed.
+21:18:26 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+21:18:26 INFO  : Launch script is exported to file 'C:\ECE520\Vivado\Lab2\axi_gpio_ab\axi_gpio_vitis_T1\axi_gpio_app_tb_system\_ide\scripts\debugger_axi_gpio_app_tb-default.tcl'
+21:20:47 INFO  : Checking for BSP changes to sync application flags for project 'axi_gpio_app_tb'...
+21:21:03 INFO  : Disconnected from the channel tcfchan#9.
+21:21:04 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:21:04 INFO  : Jtag cable 'Digilent Zybo Z7 210351B3FE7AA' is selected.
+21:21:04 INFO  : 'jtag frequency' command is executed.
+21:21:04 INFO  : Context for 'APU' is selected.
+21:21:04 INFO  : System reset is completed.
+21:21:07 INFO  : 'after 3000' command is executed.
+21:21:07 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B3FE7AA" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B3FE7AA-13722093-0"}' command is executed.
+21:21:08 INFO  : Device configured successfully with "C:/ECE520/Vivado/Lab2/axi_gpio_ab/axi_gpio_vitis_T1/axi_gpio_app_tb/_ide/bitstream/axi_gpio_ab_wrapper_T1.bit"
+21:21:08 INFO  : Context for 'APU' is selected.
+21:21:08 INFO  : Hardware design and registers information is loaded from 'C:/ECE520/Vivado/Lab2/axi_gpio_ab/axi_gpio_vitis_T1/axi_gpio_platform_T1/export/axi_gpio_platform_T1/hw/axi_gpio_ab_wrapper_T1.xsa'.
+21:21:08 INFO  : 'configparams force-mem-access 1' command is executed.
+21:21:08 INFO  : Context for 'APU' is selected.
+21:21:08 INFO  : Sourcing of 'C:/ECE520/Vivado/Lab2/axi_gpio_ab/axi_gpio_vitis_T1/axi_gpio_app_tb/_ide/psinit/ps7_init.tcl' is done.
+21:21:08 INFO  : 'ps7_init' command is executed.
+21:21:08 INFO  : 'ps7_post_config' command is executed.
+21:21:08 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:21:09 INFO  : The application 'C:/ECE520/Vivado/Lab2/axi_gpio_ab/axi_gpio_vitis_T1/axi_gpio_app_tb/Debug/axi_gpio_app_tb.elf' is downloaded to processor 'ps7_cortexa9_0'.
+21:21:09 INFO  : 'configparams force-mem-access 0' command is executed.
+21:21:09 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B3FE7AA" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B3FE7AA-13722093-0"}
+fpga -file C:/ECE520/Vivado/Lab2/axi_gpio_ab/axi_gpio_vitis_T1/axi_gpio_app_tb/_ide/bitstream/axi_gpio_ab_wrapper_T1.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/ECE520/Vivado/Lab2/axi_gpio_ab/axi_gpio_vitis_T1/axi_gpio_platform_T1/export/axi_gpio_platform_T1/hw/axi_gpio_ab_wrapper_T1.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/ECE520/Vivado/Lab2/axi_gpio_ab/axi_gpio_vitis_T1/axi_gpio_app_tb/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/ECE520/Vivado/Lab2/axi_gpio_ab/axi_gpio_vitis_T1/axi_gpio_app_tb/Debug/axi_gpio_app_tb.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+21:21:09 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:21:09 INFO  : 'con' command is executed.
+21:21:09 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+21:21:09 INFO  : Launch script is exported to file 'C:\ECE520\Vivado\Lab2\axi_gpio_ab\axi_gpio_vitis_T1\axi_gpio_app_tb_system\_ide\scripts\debugger_axi_gpio_app_tb-default.tcl'
+21:22:02 INFO  : Checking for BSP changes to sync application flags for project 'axi_gpio_app_tb'...
+21:22:14 INFO  : Disconnected from the channel tcfchan#11.
+21:22:15 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:22:15 INFO  : Jtag cable 'Digilent Zybo Z7 210351B3FE7AA' is selected.
+21:22:15 INFO  : 'jtag frequency' command is executed.
+21:22:15 INFO  : Context for 'APU' is selected.
+21:22:15 INFO  : System reset is completed.
+21:22:18 INFO  : 'after 3000' command is executed.
+21:22:18 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B3FE7AA" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B3FE7AA-13722093-0"}' command is executed.
+21:22:19 INFO  : Device configured successfully with "C:/ECE520/Vivado/Lab2/axi_gpio_ab/axi_gpio_vitis_T1/axi_gpio_app_tb/_ide/bitstream/axi_gpio_ab_wrapper_T1.bit"
+21:22:19 INFO  : Context for 'APU' is selected.
+21:22:19 INFO  : Hardware design and registers information is loaded from 'C:/ECE520/Vivado/Lab2/axi_gpio_ab/axi_gpio_vitis_T1/axi_gpio_platform_T1/export/axi_gpio_platform_T1/hw/axi_gpio_ab_wrapper_T1.xsa'.
+21:22:19 INFO  : 'configparams force-mem-access 1' command is executed.
+21:22:19 INFO  : Context for 'APU' is selected.
+21:22:19 INFO  : Sourcing of 'C:/ECE520/Vivado/Lab2/axi_gpio_ab/axi_gpio_vitis_T1/axi_gpio_app_tb/_ide/psinit/ps7_init.tcl' is done.
+21:22:20 INFO  : 'ps7_init' command is executed.
+21:22:20 INFO  : 'ps7_post_config' command is executed.
+21:22:20 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:22:20 INFO  : The application 'C:/ECE520/Vivado/Lab2/axi_gpio_ab/axi_gpio_vitis_T1/axi_gpio_app_tb/Debug/axi_gpio_app_tb.elf' is downloaded to processor 'ps7_cortexa9_0'.
+21:22:20 INFO  : 'configparams force-mem-access 0' command is executed.
+21:22:20 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B3FE7AA" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B3FE7AA-13722093-0"}
+fpga -file C:/ECE520/Vivado/Lab2/axi_gpio_ab/axi_gpio_vitis_T1/axi_gpio_app_tb/_ide/bitstream/axi_gpio_ab_wrapper_T1.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/ECE520/Vivado/Lab2/axi_gpio_ab/axi_gpio_vitis_T1/axi_gpio_platform_T1/export/axi_gpio_platform_T1/hw/axi_gpio_ab_wrapper_T1.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/ECE520/Vivado/Lab2/axi_gpio_ab/axi_gpio_vitis_T1/axi_gpio_app_tb/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/ECE520/Vivado/Lab2/axi_gpio_ab/axi_gpio_vitis_T1/axi_gpio_app_tb/Debug/axi_gpio_app_tb.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+21:22:20 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:22:20 INFO  : 'con' command is executed.
+21:22:20 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+21:22:20 INFO  : Launch script is exported to file 'C:\ECE520\Vivado\Lab2\axi_gpio_ab\axi_gpio_vitis_T1\axi_gpio_app_tb_system\_ide\scripts\debugger_axi_gpio_app_tb-default.tcl'
+21:23:43 INFO  : Checking for BSP changes to sync application flags for project 'axi_gpio_app_tb'...
+21:23:55 INFO  : Disconnected from the channel tcfchan#13.
+21:23:56 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:23:56 INFO  : Jtag cable 'Digilent Zybo Z7 210351B3FE7AA' is selected.
+21:23:56 INFO  : 'jtag frequency' command is executed.
+21:23:56 INFO  : Context for 'APU' is selected.
+21:23:56 INFO  : System reset is completed.
+21:23:59 INFO  : 'after 3000' command is executed.
+21:23:59 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B3FE7AA" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B3FE7AA-13722093-0"}' command is executed.
+21:24:00 INFO  : Device configured successfully with "C:/ECE520/Vivado/Lab2/axi_gpio_ab/axi_gpio_vitis_T1/axi_gpio_app_tb/_ide/bitstream/axi_gpio_ab_wrapper_T1.bit"
+21:24:01 INFO  : Context for 'APU' is selected.
+21:24:01 INFO  : Hardware design and registers information is loaded from 'C:/ECE520/Vivado/Lab2/axi_gpio_ab/axi_gpio_vitis_T1/axi_gpio_platform_T1/export/axi_gpio_platform_T1/hw/axi_gpio_ab_wrapper_T1.xsa'.
+21:24:01 INFO  : 'configparams force-mem-access 1' command is executed.
+21:24:01 INFO  : Context for 'APU' is selected.
+21:24:01 INFO  : Sourcing of 'C:/ECE520/Vivado/Lab2/axi_gpio_ab/axi_gpio_vitis_T1/axi_gpio_app_tb/_ide/psinit/ps7_init.tcl' is done.
+21:24:01 INFO  : 'ps7_init' command is executed.
+21:24:01 INFO  : 'ps7_post_config' command is executed.
+21:24:01 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:24:01 INFO  : The application 'C:/ECE520/Vivado/Lab2/axi_gpio_ab/axi_gpio_vitis_T1/axi_gpio_app_tb/Debug/axi_gpio_app_tb.elf' is downloaded to processor 'ps7_cortexa9_0'.
+21:24:01 INFO  : 'configparams force-mem-access 0' command is executed.
+21:24:01 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B3FE7AA" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B3FE7AA-13722093-0"}
+fpga -file C:/ECE520/Vivado/Lab2/axi_gpio_ab/axi_gpio_vitis_T1/axi_gpio_app_tb/_ide/bitstream/axi_gpio_ab_wrapper_T1.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/ECE520/Vivado/Lab2/axi_gpio_ab/axi_gpio_vitis_T1/axi_gpio_platform_T1/export/axi_gpio_platform_T1/hw/axi_gpio_ab_wrapper_T1.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/ECE520/Vivado/Lab2/axi_gpio_ab/axi_gpio_vitis_T1/axi_gpio_app_tb/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/ECE520/Vivado/Lab2/axi_gpio_ab/axi_gpio_vitis_T1/axi_gpio_app_tb/Debug/axi_gpio_app_tb.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+21:24:01 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:24:01 INFO  : 'con' command is executed.
+21:24:01 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+21:24:01 INFO  : Launch script is exported to file 'C:\ECE520\Vivado\Lab2\axi_gpio_ab\axi_gpio_vitis_T1\axi_gpio_app_tb_system\_ide\scripts\debugger_axi_gpio_app_tb-default.tcl'
+21:24:52 INFO  : Checking for BSP changes to sync application flags for project 'axi_gpio_app_tb'...
+21:25:04 INFO  : Disconnected from the channel tcfchan#15.
+21:25:05 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:25:06 INFO  : Jtag cable 'Digilent Zybo Z7 210351B3FE7AA' is selected.
+21:25:06 INFO  : 'jtag frequency' command is executed.
+21:25:06 INFO  : Context for 'APU' is selected.
+21:25:06 INFO  : System reset is completed.
+21:25:09 INFO  : 'after 3000' command is executed.
+21:25:09 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B3FE7AA" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B3FE7AA-13722093-0"}' command is executed.
+21:25:10 INFO  : Device configured successfully with "C:/ECE520/Vivado/Lab2/axi_gpio_ab/axi_gpio_vitis_T1/axi_gpio_app_tb/_ide/bitstream/axi_gpio_ab_wrapper_T1.bit"
+21:25:10 INFO  : Context for 'APU' is selected.
+21:25:10 INFO  : Hardware design and registers information is loaded from 'C:/ECE520/Vivado/Lab2/axi_gpio_ab/axi_gpio_vitis_T1/axi_gpio_platform_T1/export/axi_gpio_platform_T1/hw/axi_gpio_ab_wrapper_T1.xsa'.
+21:25:10 INFO  : 'configparams force-mem-access 1' command is executed.
+21:25:10 INFO  : Context for 'APU' is selected.
+21:25:10 INFO  : Sourcing of 'C:/ECE520/Vivado/Lab2/axi_gpio_ab/axi_gpio_vitis_T1/axi_gpio_app_tb/_ide/psinit/ps7_init.tcl' is done.
+21:25:10 INFO  : 'ps7_init' command is executed.
+21:25:10 INFO  : 'ps7_post_config' command is executed.
+21:25:10 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:25:11 INFO  : The application 'C:/ECE520/Vivado/Lab2/axi_gpio_ab/axi_gpio_vitis_T1/axi_gpio_app_tb/Debug/axi_gpio_app_tb.elf' is downloaded to processor 'ps7_cortexa9_0'.
+21:25:11 INFO  : 'configparams force-mem-access 0' command is executed.
+21:25:11 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B3FE7AA" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B3FE7AA-13722093-0"}
+fpga -file C:/ECE520/Vivado/Lab2/axi_gpio_ab/axi_gpio_vitis_T1/axi_gpio_app_tb/_ide/bitstream/axi_gpio_ab_wrapper_T1.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/ECE520/Vivado/Lab2/axi_gpio_ab/axi_gpio_vitis_T1/axi_gpio_platform_T1/export/axi_gpio_platform_T1/hw/axi_gpio_ab_wrapper_T1.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/ECE520/Vivado/Lab2/axi_gpio_ab/axi_gpio_vitis_T1/axi_gpio_app_tb/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/ECE520/Vivado/Lab2/axi_gpio_ab/axi_gpio_vitis_T1/axi_gpio_app_tb/Debug/axi_gpio_app_tb.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+21:25:11 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:25:11 INFO  : 'con' command is executed.
+21:25:11 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+21:25:11 INFO  : Launch script is exported to file 'C:\ECE520\Vivado\Lab2\axi_gpio_ab\axi_gpio_vitis_T1\axi_gpio_app_tb_system\_ide\scripts\debugger_axi_gpio_app_tb-default.tcl'
+21:27:58 INFO  : Checking for BSP changes to sync application flags for project 'axi_gpio_app_tb'...
+21:28:10 INFO  : Disconnected from the channel tcfchan#17.
+21:28:11 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:28:11 INFO  : Jtag cable 'Digilent Zybo Z7 210351B3FE7AA' is selected.
+21:28:11 INFO  : 'jtag frequency' command is executed.
+21:28:11 INFO  : Context for 'APU' is selected.
+21:28:12 INFO  : System reset is completed.
+21:28:15 INFO  : 'after 3000' command is executed.
+21:28:15 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B3FE7AA" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B3FE7AA-13722093-0"}' command is executed.
+21:28:16 INFO  : Device configured successfully with "C:/ECE520/Vivado/Lab2/axi_gpio_ab/axi_gpio_vitis_T1/axi_gpio_app_tb/_ide/bitstream/axi_gpio_ab_wrapper_T1.bit"
+21:28:16 INFO  : Context for 'APU' is selected.
+21:28:16 INFO  : Hardware design and registers information is loaded from 'C:/ECE520/Vivado/Lab2/axi_gpio_ab/axi_gpio_vitis_T1/axi_gpio_platform_T1/export/axi_gpio_platform_T1/hw/axi_gpio_ab_wrapper_T1.xsa'.
+21:28:16 INFO  : 'configparams force-mem-access 1' command is executed.
+21:28:16 INFO  : Context for 'APU' is selected.
+21:28:16 INFO  : Sourcing of 'C:/ECE520/Vivado/Lab2/axi_gpio_ab/axi_gpio_vitis_T1/axi_gpio_app_tb/_ide/psinit/ps7_init.tcl' is done.
+21:28:16 INFO  : 'ps7_init' command is executed.
+21:28:16 INFO  : 'ps7_post_config' command is executed.
+21:28:16 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:28:17 INFO  : The application 'C:/ECE520/Vivado/Lab2/axi_gpio_ab/axi_gpio_vitis_T1/axi_gpio_app_tb/Debug/axi_gpio_app_tb.elf' is downloaded to processor 'ps7_cortexa9_0'.
+21:28:17 INFO  : 'configparams force-mem-access 0' command is executed.
+21:28:17 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B3FE7AA" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B3FE7AA-13722093-0"}
+fpga -file C:/ECE520/Vivado/Lab2/axi_gpio_ab/axi_gpio_vitis_T1/axi_gpio_app_tb/_ide/bitstream/axi_gpio_ab_wrapper_T1.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/ECE520/Vivado/Lab2/axi_gpio_ab/axi_gpio_vitis_T1/axi_gpio_platform_T1/export/axi_gpio_platform_T1/hw/axi_gpio_ab_wrapper_T1.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/ECE520/Vivado/Lab2/axi_gpio_ab/axi_gpio_vitis_T1/axi_gpio_app_tb/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/ECE520/Vivado/Lab2/axi_gpio_ab/axi_gpio_vitis_T1/axi_gpio_app_tb/Debug/axi_gpio_app_tb.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+21:28:17 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:28:17 INFO  : 'con' command is executed.
+21:28:17 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+21:28:17 INFO  : Launch script is exported to file 'C:\ECE520\Vivado\Lab2\axi_gpio_ab\axi_gpio_vitis_T1\axi_gpio_app_tb_system\_ide\scripts\debugger_axi_gpio_app_tb-default.tcl'
+21:31:42 INFO  : Checking for BSP changes to sync application flags for project 'axi_gpio_app_tb'...
+21:32:13 INFO  : Checking for BSP changes to sync application flags for project 'axi_gpio_app_tb'...
+21:34:52 INFO  : Checking for BSP changes to sync application flags for project 'axi_gpio_app_tb'...
+21:55:01 DEBUG : Logs will be stored at 'C:/ECE520/Vivado/Lab2/axi_gpio_ab/axi_gpio_vitis_T1/IDE.log'.
+21:55:01 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\ECE520\Vivado\Lab2\axi_gpio_ab\axi_gpio_vitis_T1\temp_xsdb_launch_script.tcl
+21:55:03 INFO  : XSCT server has started successfully.
+21:55:03 INFO  : plnx-install-location is set to ''
+21:55:03 INFO  : Successfully done setting XSCT server connection channel  
+21:55:03 INFO  : Successfully done setting workspace for the tool. 
+21:55:04 INFO  : Platform repository initialization has completed.
+21:56:35 INFO  : Registering command handlers for Vitis TCF services
+21:56:35 INFO  : Successfully done query RDI_DATADIR 
+21:57:04 INFO  : Result from executing command 'getProjects': axi_gpio_platform_T1
+21:57:04 INFO  : Result from executing command 'getPlatforms': axi_gpio_platform_T1|C:/ECE520/Vivado/Lab2/axi_gpio_ab/axi_gpio_vitis_T1/axi_gpio_platform_T1/export/axi_gpio_platform_T1/axi_gpio_platform_T1.xpfm;xilinx_zcu102_base_202310_1|C:/Xilinx/Vitis/2023.1/base_platforms/xilinx_zcu102_base_202310_1/xilinx_zcu102_base_202310_1.xpfm;xilinx_zcu102_base_dfx_202310_1|C:/Xilinx/Vitis/2023.1/base_platforms/xilinx_zcu102_base_dfx_202310_1/xilinx_zcu102_base_dfx_202310_1.xpfm;xilinx_zcu104_base_202310_1|C:/Xilinx/Vitis/2023.1/base_platforms/xilinx_zcu104_base_202310_1/xilinx_zcu104_base_202310_1.xpfm
+21:57:04 INFO  : Checking for BSP changes to sync application flags for project 'axi_gpio_app_tb'...
+21:57:28 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:57:28 INFO  : Jtag cable 'Digilent Zybo Z7 210351B3FE7AA' is selected.
+21:57:28 INFO  : 'jtag frequency' command is executed.
+21:57:28 INFO  : Context for 'APU' is selected.
+21:57:28 INFO  : System reset is completed.
+21:57:31 INFO  : 'after 3000' command is executed.
+21:57:31 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B3FE7AA" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B3FE7AA-13722093-0"}' command is executed.
+21:57:32 INFO  : Device configured successfully with "C:/ECE520/Vivado/Lab2/axi_gpio_ab/axi_gpio_vitis_T1/axi_gpio_app_tb/_ide/bitstream/axi_gpio_ab_wrapper_T1.bit"
+21:57:32 INFO  : Context for 'APU' is selected.
+21:57:32 INFO  : Hardware design and registers information is loaded from 'C:/ECE520/Vivado/Lab2/axi_gpio_ab/axi_gpio_vitis_T1/axi_gpio_platform_T1/export/axi_gpio_platform_T1/hw/axi_gpio_ab_wrapper_T1.xsa'.
+21:57:32 INFO  : 'configparams force-mem-access 1' command is executed.
+21:57:32 INFO  : Context for 'APU' is selected.
+21:57:32 INFO  : Sourcing of 'C:/ECE520/Vivado/Lab2/axi_gpio_ab/axi_gpio_vitis_T1/axi_gpio_app_tb/_ide/psinit/ps7_init.tcl' is done.
+21:57:33 INFO  : 'ps7_init' command is executed.
+21:57:33 INFO  : 'ps7_post_config' command is executed.
+21:57:33 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:57:33 INFO  : The application 'C:/ECE520/Vivado/Lab2/axi_gpio_ab/axi_gpio_vitis_T1/axi_gpio_app_tb/Debug/axi_gpio_app_tb.elf' is downloaded to processor 'ps7_cortexa9_0'.
+21:57:33 INFO  : 'configparams force-mem-access 0' command is executed.
+21:57:33 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B3FE7AA" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B3FE7AA-13722093-0"}
+fpga -file C:/ECE520/Vivado/Lab2/axi_gpio_ab/axi_gpio_vitis_T1/axi_gpio_app_tb/_ide/bitstream/axi_gpio_ab_wrapper_T1.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/ECE520/Vivado/Lab2/axi_gpio_ab/axi_gpio_vitis_T1/axi_gpio_platform_T1/export/axi_gpio_platform_T1/hw/axi_gpio_ab_wrapper_T1.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/ECE520/Vivado/Lab2/axi_gpio_ab/axi_gpio_vitis_T1/axi_gpio_app_tb/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/ECE520/Vivado/Lab2/axi_gpio_ab/axi_gpio_vitis_T1/axi_gpio_app_tb/Debug/axi_gpio_app_tb.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+21:57:33 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:57:33 INFO  : 'con' command is executed.
+21:57:33 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+21:57:33 INFO  : Launch script is exported to file 'C:\ECE520\Vivado\Lab2\axi_gpio_ab\axi_gpio_vitis_T1\axi_gpio_app_tb_system\_ide\scripts\debugger_axi_gpio_app_tb-default.tcl'
+22:00:48 INFO  : Checking for BSP changes to sync application flags for project 'axi_gpio_app_tb'...
+22:00:58 INFO  : Disconnected from the channel tcfchan#3.
+22:00:59 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:01:00 INFO  : Jtag cable 'Digilent Zybo Z7 210351B3FE7AA' is selected.
+22:01:00 INFO  : 'jtag frequency' command is executed.
+22:01:00 INFO  : Context for 'APU' is selected.
+22:01:00 INFO  : System reset is completed.
+22:01:03 INFO  : 'after 3000' command is executed.
+22:01:03 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B3FE7AA" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B3FE7AA-13722093-0"}' command is executed.
+22:01:04 INFO  : Device configured successfully with "C:/ECE520/Vivado/Lab2/axi_gpio_ab/axi_gpio_vitis_T1/axi_gpio_app_tb/_ide/bitstream/axi_gpio_ab_wrapper_T1.bit"
+22:01:04 INFO  : Context for 'APU' is selected.
+22:01:04 INFO  : Hardware design and registers information is loaded from 'C:/ECE520/Vivado/Lab2/axi_gpio_ab/axi_gpio_vitis_T1/axi_gpio_platform_T1/export/axi_gpio_platform_T1/hw/axi_gpio_ab_wrapper_T1.xsa'.
+22:01:04 INFO  : 'configparams force-mem-access 1' command is executed.
+22:01:04 INFO  : Context for 'APU' is selected.
+22:01:04 INFO  : Sourcing of 'C:/ECE520/Vivado/Lab2/axi_gpio_ab/axi_gpio_vitis_T1/axi_gpio_app_tb/_ide/psinit/ps7_init.tcl' is done.
+22:01:04 INFO  : 'ps7_init' command is executed.
+22:01:04 INFO  : 'ps7_post_config' command is executed.
+22:01:04 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:01:05 INFO  : The application 'C:/ECE520/Vivado/Lab2/axi_gpio_ab/axi_gpio_vitis_T1/axi_gpio_app_tb/Debug/axi_gpio_app_tb.elf' is downloaded to processor 'ps7_cortexa9_0'.
+22:01:05 INFO  : 'configparams force-mem-access 0' command is executed.
+22:01:05 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B3FE7AA" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B3FE7AA-13722093-0"}
+fpga -file C:/ECE520/Vivado/Lab2/axi_gpio_ab/axi_gpio_vitis_T1/axi_gpio_app_tb/_ide/bitstream/axi_gpio_ab_wrapper_T1.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/ECE520/Vivado/Lab2/axi_gpio_ab/axi_gpio_vitis_T1/axi_gpio_platform_T1/export/axi_gpio_platform_T1/hw/axi_gpio_ab_wrapper_T1.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/ECE520/Vivado/Lab2/axi_gpio_ab/axi_gpio_vitis_T1/axi_gpio_app_tb/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/ECE520/Vivado/Lab2/axi_gpio_ab/axi_gpio_vitis_T1/axi_gpio_app_tb/Debug/axi_gpio_app_tb.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+22:01:05 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:01:05 INFO  : 'con' command is executed.
+22:01:05 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+22:01:05 INFO  : Launch script is exported to file 'C:\ECE520\Vivado\Lab2\axi_gpio_ab\axi_gpio_vitis_T1\axi_gpio_app_tb_system\_ide\scripts\debugger_axi_gpio_app_tb-default.tcl'
+22:01:56 INFO  : Checking for BSP changes to sync application flags for project 'axi_gpio_app_tb'...
+22:02:17 INFO  : Disconnected from the channel tcfchan#5.
+22:02:18 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:02:18 INFO  : Jtag cable 'Digilent Zybo Z7 210351B3FE7AA' is selected.
+22:02:18 INFO  : 'jtag frequency' command is executed.
+22:02:18 INFO  : Context for 'APU' is selected.
+22:02:18 INFO  : System reset is completed.
+22:02:21 INFO  : 'after 3000' command is executed.
+22:02:21 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B3FE7AA" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B3FE7AA-13722093-0"}' command is executed.
+22:02:23 INFO  : Device configured successfully with "C:/ECE520/Vivado/Lab2/axi_gpio_ab/axi_gpio_vitis_T1/axi_gpio_app_tb/_ide/bitstream/axi_gpio_ab_wrapper_T1.bit"
+22:02:23 INFO  : Context for 'APU' is selected.
+22:02:23 INFO  : Hardware design and registers information is loaded from 'C:/ECE520/Vivado/Lab2/axi_gpio_ab/axi_gpio_vitis_T1/axi_gpio_platform_T1/export/axi_gpio_platform_T1/hw/axi_gpio_ab_wrapper_T1.xsa'.
+22:02:23 INFO  : 'configparams force-mem-access 1' command is executed.
+22:02:23 INFO  : Context for 'APU' is selected.
+22:02:23 INFO  : Sourcing of 'C:/ECE520/Vivado/Lab2/axi_gpio_ab/axi_gpio_vitis_T1/axi_gpio_app_tb/_ide/psinit/ps7_init.tcl' is done.
+22:02:23 INFO  : 'ps7_init' command is executed.
+22:02:23 INFO  : 'ps7_post_config' command is executed.
+22:02:23 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:02:23 INFO  : The application 'C:/ECE520/Vivado/Lab2/axi_gpio_ab/axi_gpio_vitis_T1/axi_gpio_app_tb/Debug/axi_gpio_app_tb.elf' is downloaded to processor 'ps7_cortexa9_0'.
+22:02:23 INFO  : 'configparams force-mem-access 0' command is executed.
+22:02:23 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B3FE7AA" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B3FE7AA-13722093-0"}
+fpga -file C:/ECE520/Vivado/Lab2/axi_gpio_ab/axi_gpio_vitis_T1/axi_gpio_app_tb/_ide/bitstream/axi_gpio_ab_wrapper_T1.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/ECE520/Vivado/Lab2/axi_gpio_ab/axi_gpio_vitis_T1/axi_gpio_platform_T1/export/axi_gpio_platform_T1/hw/axi_gpio_ab_wrapper_T1.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/ECE520/Vivado/Lab2/axi_gpio_ab/axi_gpio_vitis_T1/axi_gpio_app_tb/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/ECE520/Vivado/Lab2/axi_gpio_ab/axi_gpio_vitis_T1/axi_gpio_app_tb/Debug/axi_gpio_app_tb.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+22:02:23 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:02:23 INFO  : 'con' command is executed.
+22:02:23 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+22:02:23 INFO  : Launch script is exported to file 'C:\ECE520\Vivado\Lab2\axi_gpio_ab\axi_gpio_vitis_T1\axi_gpio_app_tb_system\_ide\scripts\debugger_axi_gpio_app_tb-default.tcl'
+22:02:55 INFO  : Checking for BSP changes to sync application flags for project 'axi_gpio_app_tb'...
+22:03:08 INFO  : Disconnected from the channel tcfchan#7.
+22:03:09 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:03:09 INFO  : Jtag cable 'Digilent Zybo Z7 210351B3FE7AA' is selected.
+22:03:09 INFO  : 'jtag frequency' command is executed.
+22:03:09 INFO  : Context for 'APU' is selected.
+22:03:10 INFO  : System reset is completed.
+22:03:13 INFO  : 'after 3000' command is executed.
+22:03:13 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B3FE7AA" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B3FE7AA-13722093-0"}' command is executed.
+22:03:14 INFO  : Device configured successfully with "C:/ECE520/Vivado/Lab2/axi_gpio_ab/axi_gpio_vitis_T1/axi_gpio_app_tb/_ide/bitstream/axi_gpio_ab_wrapper_T1.bit"
+22:03:14 INFO  : Context for 'APU' is selected.
+22:03:14 INFO  : Hardware design and registers information is loaded from 'C:/ECE520/Vivado/Lab2/axi_gpio_ab/axi_gpio_vitis_T1/axi_gpio_platform_T1/export/axi_gpio_platform_T1/hw/axi_gpio_ab_wrapper_T1.xsa'.
+22:03:14 INFO  : 'configparams force-mem-access 1' command is executed.
+22:03:14 INFO  : Context for 'APU' is selected.
+22:03:14 INFO  : Sourcing of 'C:/ECE520/Vivado/Lab2/axi_gpio_ab/axi_gpio_vitis_T1/axi_gpio_app_tb/_ide/psinit/ps7_init.tcl' is done.
+22:03:14 INFO  : 'ps7_init' command is executed.
+22:03:14 INFO  : 'ps7_post_config' command is executed.
+22:03:14 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:03:15 INFO  : The application 'C:/ECE520/Vivado/Lab2/axi_gpio_ab/axi_gpio_vitis_T1/axi_gpio_app_tb/Debug/axi_gpio_app_tb.elf' is downloaded to processor 'ps7_cortexa9_0'.
+22:03:15 INFO  : 'configparams force-mem-access 0' command is executed.
+22:03:15 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B3FE7AA" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B3FE7AA-13722093-0"}
+fpga -file C:/ECE520/Vivado/Lab2/axi_gpio_ab/axi_gpio_vitis_T1/axi_gpio_app_tb/_ide/bitstream/axi_gpio_ab_wrapper_T1.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/ECE520/Vivado/Lab2/axi_gpio_ab/axi_gpio_vitis_T1/axi_gpio_platform_T1/export/axi_gpio_platform_T1/hw/axi_gpio_ab_wrapper_T1.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/ECE520/Vivado/Lab2/axi_gpio_ab/axi_gpio_vitis_T1/axi_gpio_app_tb/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/ECE520/Vivado/Lab2/axi_gpio_ab/axi_gpio_vitis_T1/axi_gpio_app_tb/Debug/axi_gpio_app_tb.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+22:03:15 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:03:15 INFO  : 'con' command is executed.
+22:03:15 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+22:03:15 INFO  : Launch script is exported to file 'C:\ECE520\Vivado\Lab2\axi_gpio_ab\axi_gpio_vitis_T1\axi_gpio_app_tb_system\_ide\scripts\debugger_axi_gpio_app_tb-default.tcl'
+22:08:04 INFO  : Checking for BSP changes to sync application flags for project 'axi_gpio_app_tb'...
+22:08:18 INFO  : Disconnected from the channel tcfchan#9.
+22:08:19 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:08:19 INFO  : Jtag cable 'Digilent Zybo Z7 210351B3FE7AA' is selected.
+22:08:19 INFO  : 'jtag frequency' command is executed.
+22:08:19 INFO  : Context for 'APU' is selected.
+22:08:19 INFO  : System reset is completed.
+22:08:22 INFO  : 'after 3000' command is executed.
+22:08:22 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B3FE7AA" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B3FE7AA-13722093-0"}' command is executed.
+22:08:24 INFO  : Device configured successfully with "C:/ECE520/Vivado/Lab2/axi_gpio_ab/axi_gpio_vitis_T1/axi_gpio_app_tb/_ide/bitstream/axi_gpio_ab_wrapper_T1.bit"
+22:08:24 INFO  : Context for 'APU' is selected.
+22:08:24 INFO  : Hardware design and registers information is loaded from 'C:/ECE520/Vivado/Lab2/axi_gpio_ab/axi_gpio_vitis_T1/axi_gpio_platform_T1/export/axi_gpio_platform_T1/hw/axi_gpio_ab_wrapper_T1.xsa'.
+22:08:24 INFO  : 'configparams force-mem-access 1' command is executed.
+22:08:24 INFO  : Context for 'APU' is selected.
+22:08:24 INFO  : Sourcing of 'C:/ECE520/Vivado/Lab2/axi_gpio_ab/axi_gpio_vitis_T1/axi_gpio_app_tb/_ide/psinit/ps7_init.tcl' is done.
+22:08:24 INFO  : 'ps7_init' command is executed.
+22:08:24 INFO  : 'ps7_post_config' command is executed.
+22:08:24 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:08:24 INFO  : The application 'C:/ECE520/Vivado/Lab2/axi_gpio_ab/axi_gpio_vitis_T1/axi_gpio_app_tb/Debug/axi_gpio_app_tb.elf' is downloaded to processor 'ps7_cortexa9_0'.
+22:08:24 INFO  : 'configparams force-mem-access 0' command is executed.
+22:08:24 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B3FE7AA" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B3FE7AA-13722093-0"}
+fpga -file C:/ECE520/Vivado/Lab2/axi_gpio_ab/axi_gpio_vitis_T1/axi_gpio_app_tb/_ide/bitstream/axi_gpio_ab_wrapper_T1.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/ECE520/Vivado/Lab2/axi_gpio_ab/axi_gpio_vitis_T1/axi_gpio_platform_T1/export/axi_gpio_platform_T1/hw/axi_gpio_ab_wrapper_T1.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/ECE520/Vivado/Lab2/axi_gpio_ab/axi_gpio_vitis_T1/axi_gpio_app_tb/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/ECE520/Vivado/Lab2/axi_gpio_ab/axi_gpio_vitis_T1/axi_gpio_app_tb/Debug/axi_gpio_app_tb.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+22:08:24 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:08:24 INFO  : 'con' command is executed.
+22:08:24 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+22:08:24 INFO  : Launch script is exported to file 'C:\ECE520\Vivado\Lab2\axi_gpio_ab\axi_gpio_vitis_T1\axi_gpio_app_tb_system\_ide\scripts\debugger_axi_gpio_app_tb-default.tcl'
+22:21:39 INFO  : Checking for BSP changes to sync application flags for project 'axi_gpio_app_tb'...
+22:21:56 INFO  : Disconnected from the channel tcfchan#11.
+22:21:57 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:21:57 INFO  : Jtag cable 'Digilent Zybo Z7 210351B3FE7AA' is selected.
+22:21:57 INFO  : 'jtag frequency' command is executed.
+22:21:57 INFO  : Context for 'APU' is selected.
+22:21:57 INFO  : System reset is completed.
+22:22:00 INFO  : 'after 3000' command is executed.
+22:22:00 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B3FE7AA" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B3FE7AA-13722093-0"}' command is executed.
+22:22:01 INFO  : Device configured successfully with "C:/ECE520/Vivado/Lab2/axi_gpio_ab/axi_gpio_vitis_T1/axi_gpio_app_tb/_ide/bitstream/axi_gpio_ab_wrapper_T1.bit"
+22:22:01 INFO  : Context for 'APU' is selected.
+22:22:01 INFO  : Hardware design and registers information is loaded from 'C:/ECE520/Vivado/Lab2/axi_gpio_ab/axi_gpio_vitis_T1/axi_gpio_platform_T1/export/axi_gpio_platform_T1/hw/axi_gpio_ab_wrapper_T1.xsa'.
+22:22:02 INFO  : 'configparams force-mem-access 1' command is executed.
+22:22:02 INFO  : Context for 'APU' is selected.
+22:22:02 INFO  : Sourcing of 'C:/ECE520/Vivado/Lab2/axi_gpio_ab/axi_gpio_vitis_T1/axi_gpio_app_tb/_ide/psinit/ps7_init.tcl' is done.
+22:22:02 INFO  : 'ps7_init' command is executed.
+22:22:02 INFO  : 'ps7_post_config' command is executed.
+22:22:02 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:22:02 INFO  : The application 'C:/ECE520/Vivado/Lab2/axi_gpio_ab/axi_gpio_vitis_T1/axi_gpio_app_tb/Debug/axi_gpio_app_tb.elf' is downloaded to processor 'ps7_cortexa9_0'.
+22:22:02 INFO  : 'configparams force-mem-access 0' command is executed.
+22:22:02 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B3FE7AA" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B3FE7AA-13722093-0"}
+fpga -file C:/ECE520/Vivado/Lab2/axi_gpio_ab/axi_gpio_vitis_T1/axi_gpio_app_tb/_ide/bitstream/axi_gpio_ab_wrapper_T1.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/ECE520/Vivado/Lab2/axi_gpio_ab/axi_gpio_vitis_T1/axi_gpio_platform_T1/export/axi_gpio_platform_T1/hw/axi_gpio_ab_wrapper_T1.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/ECE520/Vivado/Lab2/axi_gpio_ab/axi_gpio_vitis_T1/axi_gpio_app_tb/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/ECE520/Vivado/Lab2/axi_gpio_ab/axi_gpio_vitis_T1/axi_gpio_app_tb/Debug/axi_gpio_app_tb.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+22:22:02 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:22:02 INFO  : 'con' command is executed.
+22:22:02 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+22:22:02 INFO  : Launch script is exported to file 'C:\ECE520\Vivado\Lab2\axi_gpio_ab\axi_gpio_vitis_T1\axi_gpio_app_tb_system\_ide\scripts\debugger_axi_gpio_app_tb-default.tcl'
